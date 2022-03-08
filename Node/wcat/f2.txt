@@ -1,0 +1,2 @@
+[f2.txt] 
+hello.... this is the content of f2.txt
