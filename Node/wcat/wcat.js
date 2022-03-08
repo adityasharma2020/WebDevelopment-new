@@ -8,14 +8,23 @@ let inputArr = process.argv.slice(2);
 
 
 let filesArr = [];
-//placed files path in filesArr
+let optionsArr = [];
+//===========> placed files path in filesArr  <=============
 for(let i = 0;i< inputArr.length;i++){
-    filesArr.push(inputArr[i]);
+    let firstchar = inputArr[i].charAt(0);
+    console.log(firstchar);
+
+    if(firstchar == "-"){
+        optionsArr.push(inputArr[i]);
+    }else{
+
+        filesArr.push(inputArr[i]);
+    }
 
 }
 // console.log("files to be read are  : "+ filesArr); 
 
-//check if all the files are present
+//===========> check if all the files are present <==========
 
 for(let i=0;i<filesArr.length;i++){
     let doesExist = fs.existsSync(filesArr[i]);
@@ -25,7 +34,7 @@ for(let i=0;i<filesArr.length;i++){
     }
 }
 
-//content read and appending starts
+//=========>  content read and appending starts <===========
 
 let content   = "";
 for(let i=0;i<filesArr.length;i++){
@@ -36,4 +45,6 @@ for(let i=0;i<filesArr.length;i++){
 console.log(content);
 
 
+let contentArr = content.split("\r\n");
+console.log(contentArr);
 
