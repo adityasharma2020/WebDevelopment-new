@@ -11,3 +11,7 @@ sub: function subtract(a,b){
 }
 
 }
+
+// console.log("printed in temp:")
+
+module.export = obj;
