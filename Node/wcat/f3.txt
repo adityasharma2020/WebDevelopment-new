@@ -1,9 +1,11 @@
-[f3.txt]hello
-how 
+hello i am content of f3
+hello
+
+how
 
 
-are 
+are
 
 
-you.
- this is the content of f3.txt
+you
+
